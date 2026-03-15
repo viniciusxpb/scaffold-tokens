@@ -76,6 +76,8 @@ IDs 51257-51263:  Padding (unused, for 64-alignment)
 
 | Resource | Link |
 |----------|------|
+| **Paper (English)** | [paper/paper_scaffold_tokens_EN.pdf](paper/paper_scaffold_tokens_EN.pdf) |
+| **Paper (Português)** | [paper/paper_scaffold_tokens_PT.pdf](paper/paper_scaffold_tokens_PT.pdf) |
 | **Pre-trained model** | [viniciusxpb/scaffold-gpt2-pt](https://huggingface.co/viniciusxpb/scaffold-gpt2-pt) |
 | **Dataset** | [viniciusxpb/scaffold-tokens-dataset](https://huggingface.co/datasets/viniciusxpb/scaffold-tokens-dataset) |
 | **Author** | [Vinícius França](https://www.linkedin.com/in/vinicius-franca-dev/) |
