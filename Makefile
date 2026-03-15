@@ -28,7 +28,7 @@ validate: ## Validate shard integrity
 sanity: ## Quick sanity check (mini model, 30 steps)
 	$(PYTHON) sanity.py
 
-train: ## Train GPT-2 124M (~55 min on RTX 3060)
+train: ## Train GPT-2 272M (~55 min on RTX 3060)
 	$(PYTHON) train.py
 
 # --- Inference ---

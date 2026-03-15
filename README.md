@@ -12,7 +12,7 @@ The model learns to use this signal for **perfect length control** and **emergen
 
 ## Key Results
 
-Trained GPT-2 124M from scratch on Portuguese news articles (RTX 3060, 55 minutes):
+Trained GPT-2 272M from scratch on Portuguese news articles (RTX 3060, 55 minutes):
 
 | Metric | Value |
 |--------|-------|
@@ -56,7 +56,7 @@ The model learns structural planning as an emergent behavior:
 
 Built on [nanoGPT 1-GPU Speedrun](https://github.com/Deveraux-Parker/nanoGPT_1GPU_SPEEDRUN), optimized for single-GPU training:
 
-- **Model:** GPT-2 124M (12 layers, 768 dim, 6 heads)
+- **Model:** GPT-2 272M (12 layers, 768 dim, 6 heads)
 - **Vocab:** 51,264 tokens (50,257 BPE + 1,000 FF tokens + 7 padding)
 - **Attention:** FlexAttention with progressive window (64 → 1792)
 - **Optimizer:** Muon (linear layers) + AdamW (embeddings)
@@ -192,7 +192,7 @@ The `<ff>` token precedes each word. Since Portuguese words often split into mul
 | `make download-model` | Download pre-trained model from Hugging Face |
 | `make validate` | Validate shard integrity |
 | `make sanity` | Quick sanity check (mini model, 30 steps) |
-| `make train` | Train GPT-2 124M (~55 min on RTX 3060) |
+| `make train` | Train GPT-2 272M (~55 min on RTX 3060) |
 | `make generate` | Generate 100 words (no prompt) |
 | `make generate-prompt PROMPT="..."` | Generate with prompt |
 | `make generate-tokens` | Generate showing `<ff_N>` scaffold tokens |

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-GPT-2 124M + FF Countdown training.
+GPT-2 272M + FF Countdown training.
 Based on train_gpt_improved.py from nanoGPT_1GPU_SPEEDRUN.
 
 Changes from original:
