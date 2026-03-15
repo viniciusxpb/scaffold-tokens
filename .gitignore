@@ -1,0 +1,26 @@
+# Data
+data/
+!data/.gitkeep
+
+# Model checkpoints
+checkpoints/
+
+# Logs
+logs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Backups
+*.tar.gz

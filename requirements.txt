@@ -1,0 +1,10 @@
+--extra-index-url https://download.pytorch.org/whl/nightly/cu124
+torch
+torchvision
+torchaudio
+tiktoken
+numpy
+tqdm
+pyyaml
+huggingface_hub
+setuptools<71

@@ -1,0 +1,71 @@
+# --- Paths ---
+data:
+  shards_dir: data/shards
+
+# --- Tokenizer ---
+tokenizer:
+  encoding: "gpt2"
+  bpe_vocab_size: 50257
+  eot_id: 50256
+  ff_base_id: 50257
+  ff_max: 999
+  total_vocab_size: 51264
+
+# --- FF ---
+ff:
+  unit: "word"
+  weight: 5.0  # FF loss weight for weighted model
+
+# --- Model ---
+model:
+  vocab_size: 51264
+  n_layer: 12
+  n_head: 6
+  n_embd: 768
+  sequence_length: 4096
+  device_batch_size: 8
+  logit_scale: 30
+  attention_scale: 0.1
+
+# --- Training ---
+training:
+  precision: "bf16"
+  num_iterations: 1750
+  warmup_iters: 0
+  cooldown_iters: 640
+  early_stop_patience: 3
+  log_every_n_steps: 10
+  # Learning rates per parameter group
+  lr_embeddings: 0.6       # wte + value embeddings
+  lr_lm_head: 0.008        # lm_head
+  lr_muon: 0.05            # linear layers (Muon optimizer)
+  lr_scalars: 0.04         # scalars (lambdas, gates)
+  # Muon momentum warmup
+  momentum_warmup_steps: 300
+  momentum_min: 0.85
+  momentum_max: 0.95
+  # Progressive attention window
+  attention_window_min: 64
+  attention_window_max: 1792
+
+# --- Checkpoint ---
+checkpoint:
+  dir: "checkpoints"
+  eval_every_n_steps: 500
+  keep_last_n: 5
+  metric: "val_loss"
+
+# --- Shards ---
+shards:
+  magic: 20240520
+  version: 1
+  dtype: "uint16"
+  shard_size: 100_000_000
+  val_split: 0.05
+  seed: 42
+
+# --- Hardware ---
+hardware:
+  max_workers: 4
+  gpu: "RTX 3060 12GB"
+  compute_capability: "sm86"
